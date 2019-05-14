@@ -21,6 +21,8 @@ from painel.views import perfil
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('customizador/', views.costumer),
+    path('cliente/', views.client),
     path('perfil/', perfil)
 
 ]

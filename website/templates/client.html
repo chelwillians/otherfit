@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <nav>
+        <div>
+            <h1>OtherFit</h1>
+        </div>
+        <a href="">item</a>
+        <a href="">item</a>
+        <a href="">item</a>
+        <a href="">LOGIN</a>
+    </nav>
+    <header>
+    </header>
+    <aside>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            a type specimen book. It has survived not only five centuries, but also the leap iith the release of Letraset
+            sheets containing Lo
+
+        </p>
+    </aside>
+    <article>
+        <h2>Encontre sua estilização</h2>
+        <form name="formteste" action="" method="post">
+
+            <p class="nome">
+                <input type="text" name="nome" placeholder="Nome" required="required">
+            </p>
+
+            <p class="email">
+                <input type="email" name="email" placeholder="E-mail" required="required">
+            </p>
+
+            <p class="mensagem">
+                <textarea name="mensagem" placeholder="Especifique sua estilização"></textarea>
+            </p>
+
+            <p class="enviar">
+                <input type="submit" name="enviar" value="Busque alguém">
+            </p>
+
+        </form>
+    </article>
+    <main>
+        <a>Pessoa 1</a>
+        <a>Pessoa 2</a>
+        <a>Pessoa 3</a>
+    </main>
+{% endblock %}
