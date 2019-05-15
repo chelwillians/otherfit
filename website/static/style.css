@@ -1,14 +1,15 @@
 body{
-    margin:0;
-    display: grid;
-    grid-template-areas: 'navbar navbar navbar navbar'
-                         'header header header aside'
-                         'article article main main'
-                         'footer footer footer footer ';
-    grid-template-rows: 7vh 60vh 80vh 8vh;  
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 0px; 
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
+
+.center{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
 nav{
     grid-area: navbar;
     background-color:rgba(193, 70, 250, 0.459);
@@ -16,18 +17,25 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+nav .content{
+    display: flex;
+    justify-content: space-between;
+}
 nav a{
     color:white;
     text-decoration: none;
     font-size: 13pt;  
-    font-family: 'Cabin', sans-serif;;
+    font-family: 'Cabin', sans-serif;
+    margin-left: 10px;
 }
-nav div{
-    grid-area: navbar;
-    background-color:none;
+nav .logo{
     display: flex;
     justify-content: flex-start;
     height: 100%;
+    align-items: center;
+}
+nav .menu{
+    display: flex;
     align-items: center;
 }
 nav div h1{
@@ -40,96 +48,27 @@ nav a:hover{
     color:none;
     text-decoration: underline;
 }
+
 header{
-    grid-area: header;
-    background-color: none;
     background-image: url("images/banner.jpg");
     background-size: cover;
+    height: calc(80vh - 65px);
 }
-aside{
-    grid-area: aside;
-    background-color: white;
+header .center{
     display: flex;
-    align-items: center;
-    padding: 10px 10px 10px 10px;
-    font-family: 'Cabin', sans-serif;
-    color: black;
-    text-align: justify;
-}
-article{
-    grid-area: article;
-    background-color: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-article form{
-    font-size: 16px;
-    background: none;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0 10px 10px 10px;
-}
-h1{
-    color: #333;
-}
-input, textarea{
-    width: 474px;
-    padding: 10px;
-}
-.enviar input {
-    background-color: rgb(0, 109, 199);
-    height: 40px;
-    width: 150px;
-    font-weight: bold;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px solid;
-    color: #FFF;
-    cursor: pointer;
-}
-.enviar input:hover{
-    background: #078;
-    }
-    textarea {
-    width: 474px;
-    height: 120px;
-    line-height: 20px;
-}
-article h2{
-    font-family: 'Cabin', sans-serif;
-    font-size: 20pt;
-}
-main{
-    grid-area: main;
-    background-color: none;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
 }
-footer{
-    grid-area: footer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(193, 70, 250, 0.459);
-    padding: 10px;
+header p{
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+    font-size: 15pt;
 }
-footer p{
-    font-family: 'VT323', monospace;
-    font-size: 10pt;
-    color: #586069;
-}
-footer a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 10pt;
-}
-footer a:hover{
-    text-decoration: underline;
+header aside{
+    width: 40%;
 }
 
-
+.services{
+    
+}
