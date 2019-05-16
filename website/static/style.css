@@ -1,74 +1,183 @@
-body{
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
+body {
+	margin: 0;
+	font-family: "Raleway", sans-serif;
 }
 
-.center{
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
+.center {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
 }
 
-nav{
-    grid-area: navbar;
-    background-color:rgba(193, 70, 250, 0.459);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+nav {
+	grid-area: navbar;
+	background-color: rgba(193, 70, 250, 0.459);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
-nav .content{
-    display: flex;
-    justify-content: space-between;
+nav .content {
+	display: flex;
+	justify-content: space-between;
 }
-nav a{
-    color:white;
-    text-decoration: none;
-    font-size: 13pt;  
-    font-family: 'Cabin', sans-serif;
-    margin-left: 10px;
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 13pt;
+	font-family: "Cabin", sans-serif;
+	margin-left: 10px;
 }
-nav .logo{
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    align-items: center;
+nav .logo {
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: center;
 }
-nav .menu{
-    display: flex;
-    align-items: center;
+nav .menu {
+	display: flex;
+	align-items: center;
 }
-nav div h1{
-    font-family: 'VT323', monospace;
-    text-decoration: none;
-    color:white;
-    font-size: 17pt;
+nav div h1 {
+	font-family: "VT323", monospace;
+	text-decoration: none;
+	color: white;
+	font-size: 17pt;
 }
-nav a:hover{
-    color:none;
-    text-decoration: underline;
-}
-
-header{
-    background-image: url("images/banner.jpg");
-    background-size: cover;
-    height: calc(80vh - 65px);
-}
-header .center{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-header p{
-    margin: 0;
-    font-weight: 600;
-    text-shadow: 0 0 2px rgba(255, 255, 255, 1);
-    font-size: 15pt;
-}
-header aside{
-    width: 40%;
+nav a:hover {
+	color: none;
+	text-decoration: underline;
 }
 
-.services{
-    
+header {
+	background-image: url("images/banner.jpg");
+	background-size: cover;
+	height: 400px;
+}
+header .center {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+header p {
+	margin: 0;
+	font-weight: 600;
+	text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+	font-size: 15pt;
+}
+header aside {
+	width: 40%;
+}
+
+.services {
+	padding: 70px 0;
+}
+
+.services .center {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.services .client,
+.services .customer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 45%;
+}
+
+.services h2 {
+	margin: 0;
+}
+
+.services p {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.button-c {
+	background-color: rgba(193, 70, 250, 0.459);
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	width: 160px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+}
+.button-f {
+	background-color: rgba(193, 70, 250, 0.459);
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	width: 160px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+}
+
+.donate {
+	margin-bottom: 50px;
+}
+
+.donate .center {
+	text-align: center;
+}
+
+footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(193, 70, 250, 0.459);
+	padding: 10px 0;
+}
+footer p {
+	font-size: 10pt;
+	color: #586069;
+}
+footer a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-size: 12pt;
+	justify-content: center;
+	margin: 0 15px;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+	.center {
+		width: 95%;
+	}
+}
+
+@media (max-width: 768px) {
+    .services{
+        padding-bottom: 0;
+    }
+	.services .center {
+		flex-direction: column;
+	}
+	.services .client,
+	.services .customer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+	footer {
+		flex-direction: column-reverse;
+	}
+	footer div {
+		padding: 13.333px 0;
+	}
+}
+
+@media (max-width: 568px) {
+	footer div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
