@@ -49,23 +49,23 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-header {
+.banner-prin {
 	background-image: url("images/banner.jpg");
 	background-size: cover;
 	height: 400px;
 }
-header .center {
+.banner-prin .center {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
-header p {
+.banner-prin p {
 	margin: 0;
 	font-weight: 600;
 	text-shadow: 0 0 2px rgba(255, 255, 255, 1);
 	font-size: 15pt;
 }
-header aside {
+.banner-prin aside {
 	width: 40%;
 }
 
