@@ -126,12 +126,72 @@ nav a:hover {
 	text-align: center;
 }
 
+.search .center{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.search .center .left, .search .center .right{
+	width: 40%;
+	padding: 0 5%;
+}
+
+.search .center .right{
+	height: 300px;
+	overflow-y: auto;
+}
+
+.search h2{
+	margin-top: 0;
+}
+
+.search form{
+	width: 100%;
+}
+
+.search form input::placeholder{
+	font-size: 13pt;
+}
+
+.search form input:not([type="submit"]){
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	border: none;
+	border-bottom: 1.3px solid #444;
+	font-size: 13pt;
+	width: calc(45% - 10px);
+}
+
+.search .inputs{
+	display: flex;
+	justify-content: space-between;
+}
+
+.search .enviar{
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.search .enviar input{
+	background-color: rgba(193, 70, 250, 0.459);
+    font-size: 17px;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+}
+
 footer {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background-color: rgba(193, 70, 250, 0.459);
 	padding: 10px 0;
+	margin-top: 40px;
 }
 footer p {
 	font-size: 10pt;
@@ -175,6 +235,12 @@ footer a:hover {
 	}
 	footer div {
 		padding: 13.333px 0;
+	}
+}
+
+@media (max-width: 640px) {
+	.search .center .left, .search .center .right{
+		width: 90%;
 	}
 }
 

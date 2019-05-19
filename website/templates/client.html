@@ -4,50 +4,74 @@
 
 {% block content %}
 
-    <nav>
-        <div>
-            <h1>OtherFit</h1>
-        </div>
-        <a href="">item</a>
-        <a href="">item</a>
-        <a href="">item</a>
-        <a href="">LOGIN</a>
-    </nav>
-    <header>
-    </header>
-    <aside>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-            a type specimen book. It has survived not only five centuries, but also the leap iith the release of Letraset
-            sheets containing Lo
-
+<header class="banner-prin">
+</header>
+<section class="header-page">
+    <div class="center">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            theindustry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it tomakea type specimen book. It has survived not only five centuries, but also the leap iith the
+            release ofLetrasetsheets containing Lo
         </p>
-    </aside>
-    <article>
-        <h2>Encontre sua estilização</h2>
-        <form name="formteste" action="" method="post">
+    </div>
+</section>
+<section class="search">
+    <div class="center">
+        <div class="left">
+            <h2>Encontre sua estilização</h2>
+            <form name="form" action="" method="post">
+                <div class="inputs">
+                    <input type="text" name="localizacao" placeholder="Localização" required="required">
+                    <input type="text" name="tipo" placeholder="Tipo de estilização" required="required">
+                </div>
+                <div class="enviar">
+                    <input type="submit" name="enviar" value="Busque alguém">
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <div class="customer">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="dados">
+                    <p>Loja TalTal</p>
+                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
+                    <p>(11) 4454-5920</p>
+                </div>
+            </div>
+            <div class="customer">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="dados">
+                    <p>Loja TalTal</p>
+                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
+                    <p>(11) 4454-5920</p>
+                </div>
+            </div>
+            <div class="customer">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="dados">
+                    <p>Loja TalTal</p>
+                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
+                    <p>(11) 4454-5920</p>
+                </div>
+            </div>
+            <div class="customer">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="dados">
+                    <p>Loja TalTal</p>
+                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
+                    <p>(11) 4454-5920</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <p class="nome">
-                <input type="text" name="nome" placeholder="Nome" required="required">
-            </p>
-
-            <p class="email">
-                <input type="email" name="email" placeholder="E-mail" required="required">
-            </p>
-
-            <p class="mensagem">
-                <textarea name="mensagem" placeholder="Especifique sua estilização"></textarea>
-            </p>
-
-            <p class="enviar">
-                <input type="submit" name="enviar" value="Busque alguém">
-            </p>
-
-        </form>
-    </article>
-    <main>
-        <a>Pessoa 1</a>
-        <a>Pessoa 2</a>
-        <a>Pessoa 3</a>
-    </main>
 {% endblock %}
