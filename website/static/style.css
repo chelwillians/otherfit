@@ -54,16 +54,24 @@ nav a:hover {
 	background-size: cover;
 	height: 400px;
 }
+
+.banner-prin.home {
+	background-image: url("images/lauren-fleischmann-2.jpg");
+	height: calc(100vh - 64px);
+}
+
 .banner-prin .center {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	height: 100%;
 }
 .banner-prin p {
 	margin: 0;
 	font-weight: 600;
-	text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 	font-size: 15pt;
+	color: #fafafa;
 }
 .banner-prin aside {
 	width: 40%;
@@ -106,6 +114,7 @@ nav a:hover {
 	border-radius: 20px;
 	border: none;
 	color: #fff;
+	cursor: pointer;
 }
 .button-f {
 	background-color: rgba(193, 70, 250, 0.459);
@@ -116,6 +125,7 @@ nav a:hover {
 	border-radius: 20px;
 	border: none;
 	color: #fff;
+	cursor: pointer;
 }
 
 .donate {
@@ -126,35 +136,42 @@ nav a:hover {
 	text-align: center;
 }
 
-.search .center{
+.search {
+	margin: 40px 0;
+}
+
+.search .center {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.search .center .left, .search .center .right{
+.search .center .left,
+.search .center .right {
 	width: 40%;
 	padding: 0 5%;
 }
 
-.search .center .right{
+.search .center .right {
+	width: calc(40% - 1px);
 	height: 300px;
 	overflow-y: auto;
+	border-left: #586069 1px solid;
 }
 
-.search h2{
+.search h2 {
 	margin-top: 0;
 }
 
-.search form{
+.search form {
 	width: 100%;
 }
 
-.search form input::placeholder{
+.search form input::placeholder {
 	font-size: 13pt;
 }
 
-.search form input:not([type="submit"]){
+.search form input:not([type="submit"]) {
 	margin: 0;
 	padding: 0;
 	padding-left: 10px;
@@ -164,25 +181,44 @@ nav a:hover {
 	width: calc(45% - 10px);
 }
 
-.search .inputs{
+.search .inputs {
 	display: flex;
 	justify-content: space-between;
 }
 
-.search .enviar{
+.search .enviar {
 	display: flex;
 	justify-content: center;
 	margin-top: 35px;
 }
 
-.search .enviar input{
+.search .enviar input {
 	background-color: rgba(193, 70, 250, 0.459);
-    font-size: 17px;
-    width: 160px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    color: #fff;
+	font-size: 17px;
+	width: 160px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.search .center .right .customer{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #586069;
+}
+
+.search .center .right .customer div:first-child{
+	width: 20%;
+}
+
+.search .center .right .customer div:first-child img{
+	max-width: 90%;
+}
+
+.search .center .right .customer div:last-child{
+	width: 80%;
 }
 
 footer {
@@ -215,21 +251,35 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    header aside{
-        width: 100%;
-        text-align: center;
-    }
-    .services{
-        padding-bottom: 0;
-    }
+	header aside {
+		width: 100%;
+		text-align: center;
+	}
+	.services {
+		padding-bottom: 0;
+	}
 	.services .center {
 		flex-direction: column;
 	}
 	.services .client,
 	.services .customer {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.search .center .right .customer{
+		flex-direction: column;
+		justify-content: center;
+		padding: 20px 0;
+	}
+	.search .center .right .customer:last-child{
+		border: none;
+	}
+	.search .center .right .customer div:first-child{
+		text-align: center;
+	}
+	.search .center .right .customer p{
+		text-align: center;
+	}
 	footer {
 		flex-direction: column-reverse;
 	}
@@ -239,8 +289,13 @@ footer a:hover {
 }
 
 @media (max-width: 640px) {
-	.search .center .left, .search .center .right{
+	.search .center .left,
+	.search .center .right {
 		width: 90%;
+	}
+	.search .center .right{
+		border:none;
+		margin-top: 50px;
 	}
 }
 
