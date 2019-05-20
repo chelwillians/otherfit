@@ -18,18 +18,10 @@
 <section class="new-customizer">
     <div class="center">
         <h2>Quer entrar para nossa base de Customizadores? Preencha esse formulário!</h2>
-        <form name="form" action="" method="post">
-            {% csrf_token %}
-            <!-- Evita o tipo de ataque csrf -->
-            <div class="inputs">
-                <input type="text" name="nome-empresa" placeholder="Nome da Empresa" required="required">
-                <input type="text" name="endereco" placeholder="Endereço" required="required">
-                <input type="text" name="telefones" placeholder="Telefones. Ex: (xx) xxxx-xxxx (zz) zzzzz-zzzz"
-                    required="required">
-                <input type="text" name="cnpj" placeholder="CNPJ" required="required">
-                <textarea name="funcoes"
-                    placeholder="Diga, separando por virgulas, o que você faz. Por exemplo: Bordado, estampa, barra."></textarea>
-            </div>
+        <form method="post">
+            {% csrf_token %} <!-- Evita o tipo de ataque csrf -->
+
+            {{form}}
             <div class="enviar">
                 <input type="submit" name="enviar" value="Me cadastrar">
             </div>

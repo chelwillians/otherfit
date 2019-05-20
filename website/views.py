@@ -6,12 +6,12 @@ def index(request):
     return render(request, 'index.html')
 
 def costumer(request):
-    formulario = Co(request.POST or None)
+    formulario = CostumerForm(request.POST or None)
     msg = ''
     if formulario.is_valid(): # Verifica se é valido
         formulario.save() # Salva as informações
         formulario = CostumerForm()
-        msg = 'Pedido realizado com sucesso!' # Só cria a msg se estiver dentro do if
+        msg = 'Cadastro feito com sucesso!' # Só cria a msg se estiver dentro do if
 
     contexto = {
         'form' : formulario,

@@ -7,7 +7,7 @@ class CostumerForm(forms.ModelForm):
         fields = [
             'nome_empresa',
             'endereco',
-            'telefone',
+            'telefones',
             'cnpj',
-            'desc'
+            'descricao'
         ]

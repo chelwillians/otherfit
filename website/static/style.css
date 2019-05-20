@@ -239,13 +239,17 @@ nav a:hover {
 	font-size: 13pt;
 }
 
+.new-customizer label{
+	width: 100%;
+}
+
 .new-customizer form input:not([type="submit"]) {
 	margin: 0;
 	padding: 15px 0px 5px 15px;
 	border: none;
 	border-bottom: 1.3px solid #444;
 	font-size: 13pt;
-	width: calc(45% - 10px);
+	width: calc(100% - 10px);
 	margin-bottom: 25px;
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
@@ -261,6 +265,7 @@ nav a:hover {
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
 	margin-bottom: 25px;
+	resize: none;
 }
 .new-customizer .inputs {
 	display: flex;
