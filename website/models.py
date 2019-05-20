@@ -10,3 +10,12 @@ class Costumer (models.Model):
 
     def __str__(self):
         return self.nome_empresa # Puxar o nome certinho no admin e o nome não fica "Produto object (1)"
+
+class Client (models.Model):
+    nome = models.CharField(max_length=100)
+    endereco = models.CharField(max_length=100)
+    telefones = models.CharField(max_length=100)
+    cpf = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome # Puxar o nome certinho no admin e o nome não fica "Produto object (1)"
