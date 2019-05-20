@@ -24,5 +24,4 @@ urlpatterns = [
     path('customizador/', views.costumer),
     path('cliente/', views.client),
     path('perfil/', perfil)
-
 ]

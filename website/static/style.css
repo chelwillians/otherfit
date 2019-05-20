@@ -221,6 +221,70 @@ nav a:hover {
 	width: 80%;
 }
 
+.new-customizer .center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new-customizer h2{
+	text-align: center;
+}
+
+.new-customizer form {
+	width: 80%;
+}
+
+.new-customizer form input::placeholder {
+	font-size: 13pt;
+}
+
+.new-customizer form input:not([type="submit"]) {
+	margin: 0;
+	padding: 15px 0px 5px 15px;
+	border: none;
+	border-bottom: 1.3px solid #444;
+	font-size: 13pt;
+	width: calc(45% - 10px);
+	margin-bottom: 25px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+}
+
+.new-customizer form textarea {
+	margin: 0;
+	padding: 15px 0px 5px 15px;
+	border: none;
+	border-bottom: 1.3px solid #444;
+	font-size: 13pt;
+	width: calc(100% - 10px);
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+.new-customizer .inputs {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.new-customizer .enviar {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.new-customizer .enviar input {
+	background-color: rgba(193, 70, 250, 0.459);
+	font-size: 17px;
+	width: 160px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
 footer {
 	display: flex;
 	justify-content: space-around;
@@ -296,6 +360,9 @@ footer a:hover {
 	.search .center .right{
 		border:none;
 		margin-top: 50px;
+	}
+	.new-customizer form input:not([type="submit"]){
+		width: 100%;
 	}
 }
 

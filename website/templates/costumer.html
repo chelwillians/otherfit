@@ -4,41 +4,41 @@
 
 {% block content %}
 
-    <header class="banner-prin">
-    </header>
-    <aside>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-            a type specimen book. It has survived not only five centuries, but also the leap iith the release of Letraset
-            sheets containing Lo
-
+<header class="banner-prin">
+</header>
+<section class="header-page">
+    <div class="center">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            theindustry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it tomakea type specimen book. It has survived not only five centuries, but also the leap iith the
+            release ofLetrasetsheets containing Lo
         </p>
-    </aside>
-    <article>
-        <h2>Encontre sua estilização</h2>
-        <form name="formteste" action="" method="post">
-
-            <p class="nome">
-                <input type="text" name="nome" placeholder="Nome" required="required">
-            </p>
-
-            <p class="email">
-                <input type="email" name="email" placeholder="E-mail" required="required">
-            </p>
-
-            <p class="mensagem">
-                <textarea name="mensagem" placeholder="Especifique sua estilização"></textarea>
-            </p>
-
-            <p class="enviar">
-                <input type="submit" name="enviar" value="Busque alguém">
-            </p>
-
+    </div>
+</section>
+<section class="new-customizer">
+    <div class="center">
+        <h2>Quer entrar para nossa base de Customizadores? Preencha esse formulário!</h2>
+        <form name="form" action="" method="post">
+            {% csrf_token %}
+            <!-- Evita o tipo de ataque csrf -->
+            <div class="inputs">
+                <input type="text" name="nome-empresa" placeholder="Nome da Empresa" required="required">
+                <input type="text" name="endereco" placeholder="Endereço" required="required">
+                <input type="text" name="telefones" placeholder="Telefones. Ex: (xx) xxxx-xxxx (zz) zzzzz-zzzz"
+                    required="required">
+                <input type="text" name="cnpj" placeholder="CNPJ" required="required">
+                <textarea name="funcoes"
+                    placeholder="Diga, separando por virgulas, o que você faz. Por exemplo: Bordado, estampa, barra."></textarea>
+            </div>
+            <div class="enviar">
+                <input type="submit" name="enviar" value="Me cadastrar">
+            </div>
+            {% if msg %}
+                <h3>{{msg}}</h3>
+            {% endif %}
         </form>
-    </article>
-    <main>
-        <a>Pessoa 1</a>
-        <a>Pessoa 2</a>
-        <a>Pessoa 3</a>
-    </main>
+    </div>
+    </div>
+</section>
+
 {% endblock %}
