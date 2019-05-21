@@ -19,10 +19,10 @@
     <div class="center">
         <div class="left">
             <h2>Encontre sua estilização</h2>
-            <form name="form" action="" method="post">
+            <form name="form" action="" method="GET">
                 <div class="inputs">
-                    <input type="text" name="localizacao" placeholder="Localização" required="required">
-                    <input type="text" name="tipo" placeholder="Tipo de estilização" required="required">
+                    <input type="text" name="localizacao" placeholder="Localização" value="{{request.GET.localizacao}}">
+                    <input type="text" name="tipo" placeholder="Tipo de estilização" value="{{request.GET.tipo}}">
                 </div>
                 <div class="enviar">
                     <input type="submit" name="enviar" value="Busque alguém">
@@ -30,46 +30,18 @@
             </form>
         </div>
         <div class="right">
+            {% for customizador in customizadores %}
             <div class="customer">
                 <div>
                     <img src="../static/images/shop.png" alt="Logo Customizador">
                 </div>
                 <div class="dados">
-                    <p>Loja TalTal</p>
-                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
-                    <p>(11) 4454-5920</p>
+                    <p>{{ customizador.nome_empresa }}</p>
+                    <p>{{ customizador.endereco }}</p>
+                    <p>{{ customizador.telefones }}</p>
                 </div>
             </div>
-            <div class="customer">
-                <div>
-                    <img src="../static/images/shop.png" alt="Logo Customizador">
-                </div>
-                <div class="dados">
-                    <p>Loja TalTal</p>
-                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
-                    <p>(11) 4454-5920</p>
-                </div>
-            </div>
-            <div class="customer">
-                <div>
-                    <img src="../static/images/shop.png" alt="Logo Customizador">
-                </div>
-                <div class="dados">
-                    <p>Loja TalTal</p>
-                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
-                    <p>(11) 4454-5920</p>
-                </div>
-            </div>
-            <div class="customer">
-                <div>
-                    <img src="../static/images/shop.png" alt="Logo Customizador">
-                </div>
-                <div class="dados">
-                    <p>Loja TalTal</p>
-                    <p>Rua Feijo Mariados, 485 - Santo André/SP</p>
-                    <p>(11) 4454-5920</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
