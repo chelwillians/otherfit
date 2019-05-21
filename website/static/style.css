@@ -16,13 +16,14 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	text-align: justify;
 }
 nav .content {
 	display: flex;
 	justify-content: space-between;
 }
 nav a {
-	color: #1f1e19;
+	color: #000000;
 	text-decoration: none;
 	font-size: 13pt;
 	margin-left: 25px;
@@ -39,7 +40,7 @@ nav a::after {
 	transform: translateX(-50%);
 	height: 2px;
 	width: 0;
-	background-color: #1f1e19;
+	background-color: #000000;
 	transition: width .7s;
 }
 
@@ -62,7 +63,7 @@ nav .menu {
 	align-items: center;
 }
 nav div h1 {
-	font-family: "VT323", monospace;
+	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	color: white;
 	font-size: 17pt;
@@ -75,7 +76,7 @@ nav div h1 {
 }
 
 .banner-prin.home {
-	background-image: url("images/lauren-fleischmann-2.jpg");
+	background-image: url("images/lauren-fleischmann.jpg");
 	height: calc(100vh - 64px);
 }
 
@@ -104,6 +105,10 @@ nav div h1 {
 }
 .banner-prin aside {
 	width: 40%;
+}
+
+.header-page .center {
+	margin-top: 50px;
 }
 
 .services {
@@ -160,7 +165,9 @@ nav div h1 {
 }
 
 .donate {
-	margin-bottom: 50px;
+	background-image: url(images/bannerdoacao.jpg);
+	background-size: cover;
+	height: 372px;
 }
 
 .donate .center {
