@@ -12,7 +12,7 @@ body {
 
 nav {
 	grid-area: navbar;
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -22,12 +22,35 @@ nav .content {
 	justify-content: space-between;
 }
 nav a {
-	color: white;
+	color: #1f1e19;
 	text-decoration: none;
 	font-size: 13pt;
-	font-family: "Cabin", sans-serif;
-	margin-left: 10px;
+	margin-left: 25px;
+	text-transform: uppercase;
+	font-weight: 600;
+	position: relative;
 }
+
+nav a::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 2px;
+	width: 0;
+	background-color: #1f1e19;
+	transition: width .7s;
+}
+
+nav a:hover {
+	color: none;
+}
+
+nav a:hover::after {
+	width: 100%;
+}
+
 nav .logo {
 	display: flex;
 	justify-content: flex-start;
@@ -44,10 +67,6 @@ nav div h1 {
 	color: white;
 	font-size: 17pt;
 }
-nav a:hover {
-	color: none;
-	text-decoration: underline;
-}
 
 .banner-prin {
 	background-image: url("images/banner.jpg");
@@ -58,6 +77,16 @@ nav a:hover {
 .banner-prin.home {
 	background-image: url("images/lauren-fleischmann-2.jpg");
 	height: calc(100vh - 64px);
+}
+
+.banner-prin.cliente {
+	background-image: url("images/cliente-pg.jpg");
+	background-position: bottom;
+}
+
+.banner-prin.estilizador {
+	background-image: url("images/estilizador.jpg");
+	background-position: bottom;
 }
 
 .banner-prin .center {
@@ -106,7 +135,8 @@ nav a:hover {
 }
 
 .button-c {
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
+	background-image: linear-gradient(to right, rgb(185, 179, 179) , rgb(148, 148, 148));
 	color: rgb(0, 0, 0);
 	font-size: 17px;
 	width: 160px;
@@ -117,7 +147,8 @@ nav a:hover {
 	cursor: pointer;
 }
 .button-f {
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
+	background-image: linear-gradient(to right, rgb(185, 179, 179) , rgb(148, 148, 148));
 	color: rgb(0, 0, 0);
 	font-size: 17px;
 	width: 160px;
@@ -193,7 +224,8 @@ nav a:hover {
 }
 
 .search .enviar input {
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
+	background-image: linear-gradient(to right, rgb(185, 179, 179) , rgb(148, 148, 148));
 	font-size: 17px;
 	width: 160px;
 	height: 40px;
@@ -203,31 +235,31 @@ nav a:hover {
 	cursor: pointer;
 }
 
-.search .center .right .customer{
+.search .center .right .customer {
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid #586069;
 }
 
-.search .center .right .customer div:first-child{
+.search .center .right .customer div:first-child {
 	width: 20%;
 }
 
-.search .center .right .customer div:first-child img{
+.search .center .right .customer div:first-child img {
 	max-width: 90%;
 }
 
-.search .center .right .customer div:last-child{
+.search .center .right .customer div:last-child {
 	width: 80%;
 }
 
-.new-customizer .center{
+.new-customizer .center {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.new-customizer h2{
+.new-customizer h2 {
 	text-align: center;
 }
 
@@ -239,7 +271,7 @@ nav a:hover {
 	font-size: 13pt;
 }
 
-.new-customizer label{
+.new-customizer label {
 	width: 100%;
 }
 
@@ -280,7 +312,8 @@ nav a:hover {
 }
 
 .new-customizer .enviar input {
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
+	background-image: linear-gradient(to right, rgb(185, 179, 179) , rgb(148, 148, 148));
 	font-size: 17px;
 	width: 160px;
 	height: 40px;
@@ -294,7 +327,8 @@ footer {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: rgba(193, 70, 250, 0.459);
+	background-color: rgb(185, 179, 179);
+	background-image: linear-gradient(to right, rgb(185, 179, 179) , rgb(148, 148, 148));
 	padding: 10px 0;
 	margin-top: 40px;
 }
@@ -335,18 +369,18 @@ footer a:hover {
 		width: 100%;
 		margin-bottom: 20px;
 	}
-	.search .center .right .customer{
+	.search .center .right .customer {
 		flex-direction: column;
 		justify-content: center;
 		padding: 20px 0;
 	}
-	.search .center .right .customer:last-child{
+	.search .center .right .customer:last-child {
 		border: none;
 	}
-	.search .center .right .customer div:first-child{
+	.search .center .right .customer div:first-child {
 		text-align: center;
 	}
-	.search .center .right .customer p{
+	.search .center .right .customer p {
 		text-align: center;
 	}
 	footer {
@@ -362,11 +396,11 @@ footer a:hover {
 	.search .center .right {
 		width: 90%;
 	}
-	.search .center .right{
-		border:none;
+	.search .center .right {
+		border: none;
 		margin-top: 50px;
 	}
-	.new-customizer form input:not([type="submit"]){
+	.new-customizer form input:not([type="submit"]) {
 		width: 100%;
 	}
 }

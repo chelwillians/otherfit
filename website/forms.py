@@ -9,5 +9,6 @@ class CostumerForm(forms.ModelForm):
             'endereco',
             'telefones',
             'cnpj',
-            'descricao'
+            'descricao',
+            'tipo'
         ]

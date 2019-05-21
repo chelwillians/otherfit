@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<header class="banner-prin">
+<header class="banner-prin cliente">
 </header>
 <section class="header-page">
     <div class="center">
@@ -25,7 +25,7 @@
                     <input type="text" name="tipo" placeholder="Tipo de estilização" value="{{request.GET.tipo}}">
                 </div>
                 <div class="enviar">
-                    <input type="submit" name="enviar" value="Busque alguém">
+                    <input type="submit" value="Busque alguém">
                 </div>
             </form>
         </div>
@@ -33,7 +33,12 @@
             {% for customizador in customizadores %}
             <div class="customer">
                 <div>
+                    {% if customizador.tipo == "empresa" %}
                     <img src="../static/images/shop.png" alt="Logo Customizador">
+                    {% else %}
+                    <img src="../static/images/people.png" alt="Logo Customizador">
+                    {% endif %}
+
                 </div>
                 <div class="dados">
                     <p>{{ customizador.nome_empresa }}</p>

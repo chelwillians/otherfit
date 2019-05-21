@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<header class="banner-prin">
+<header class="banner-prin estilizador">
 </header>
 <section class="header-page">
     <div class="center">
@@ -20,14 +20,15 @@
         <h2>Quer entrar para nossa base de Customizadores? Preencha esse formulário!</h2>
         <form method="post">
             {% csrf_token %} <!-- Evita o tipo de ataque csrf -->
-
+            
+            {% if msg %}
+                <h3>{{msg}}</h3>
+            {% endif %}
             {{form}}
             <div class="enviar">
                 <input type="submit" name="enviar" value="Me cadastrar">
             </div>
-            {% if msg %}
-                <h3>{{msg}}</h3>
-            {% endif %}
+            
         </form>
     </div>
     </div>
