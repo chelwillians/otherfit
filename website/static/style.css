@@ -490,3 +490,9 @@ footer a:hover {
 		align-items: center;
 	}
 }
+
+@media (max-width: 525px) {
+	.donate{
+		height: 165px;
+	}
+}
