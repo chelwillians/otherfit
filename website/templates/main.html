@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="static/images/hanger.png"/>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script defer src="{% static 'script.js' %}"></script>
     <title>OtherFit</title>
 </head>
 
@@ -26,6 +27,11 @@
                 <a href="/cliente">Cliente</a>
                 <a href="/customizador">Customizador</a>
             </div>
+            <div id="menuHamburguer" class="">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
     {% block content %}
@@ -36,10 +42,9 @@
     <footer>
         <p>© 2019 OtherFit, Inc.</p>
         <div>
-            <a href="">Sobre nós</a>
-            <a href="">Redes sociais</a>
-            <a href="">Doe suas Roupas</a>
-            <a href="">Contato OtherFit</a>
+            <a href="/">Sobre nós</a>
+            <a href="/">Doe suas Roupas</a>
+            <a href="/">Contato OtherFit</a>
         </div>
     </footer>
 </body>
